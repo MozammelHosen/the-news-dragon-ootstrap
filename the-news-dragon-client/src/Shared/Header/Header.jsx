@@ -2,6 +2,7 @@ import moment from "moment";
 import React from "react";
 import Marquee from "react-fast-marquee";
 import logo from "../.././assets/logo.png";
+import Navbar from "../Navbar/Navbar";
 
 const Header = () => {
   return (
@@ -15,13 +16,14 @@ const Header = () => {
           {moment().format("dddd, MMMM DD, YYYY")}
         </h3>
       </div>
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center bg-slate-200 p-2 rounded">
         <button className="btn btn-secondary">Lates</button>
         <Marquee className="text-xl font-semibold text-red-500" speed={100}>
           I can be a React component, multiple React components, or just some
           text.
         </Marquee>
       </div>
+      <Navbar/>
     </div>
   );
 };
